@@ -1,0 +1,3 @@
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/CMakeFiles/physics.dir
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/CMakeFiles/ALL_BUILD.dir
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/CMakeFiles/ZERO_CHECK.dir
