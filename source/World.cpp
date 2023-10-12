@@ -64,11 +64,13 @@ World::World(const std::string& worldFilePath) {
         // Здесь не хватает самого главного - создания
         // объекта класса Ball со свойствами, прочитанными
         // выше, и его помещения в контейнер balls
+        Point vector{x, y};
+        Ball ball(x, y, vector, red, green, blue, radius);
 
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;
         // добавьте его в конец контейнера вызовом
-        // balls.push_back(ball);
+         balls.push_back(ball);
     }
 }
 
