@@ -20,5 +20,6 @@ private:
     Point m_center;
     Velocity m_velocity;    
     Color m_color;
+    double m_radius;
     double m_mass;
 };

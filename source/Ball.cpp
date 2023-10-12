@@ -3,8 +3,9 @@
 
 Ball::Ball(double& x, double& y, Point& vector, double& red, double& green,
     double& blue, double& radius) 
-   : m_center(x, y), m_velocity(vector), m_color(red, green, blue), m_mass(M_PI * radius * 4. / 3.) 
-{    
+   : m_center(x, y), m_velocity(vector), m_color(red, green, blue), m_radius(radius) 
+{
+    m_mass = M_PI * pow(m_radius, 3) * 4. / 3.;
 }
 
 /**
@@ -34,7 +35,7 @@ Velocity Ball::getVelocity() const {
  */
 void Ball::draw(Painter& painter) const {
     // TODO: место для доработки
-    painter.draw(m_center, radius, m_color);
+    painter.draw(m_center, m_radius, m_color);
 }
 
 /**
@@ -61,7 +62,7 @@ Point Ball::getCenter() const {
  */
 double Ball::getRadius() const {
     // TODO: место для доработки
-    return radius;
+    return m_radius;
 }
 
 /**
