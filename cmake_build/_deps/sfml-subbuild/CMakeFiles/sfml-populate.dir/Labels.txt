@@ -1,0 +1,14 @@
+# Target labels
+ sfml-populate
+# Source files and their labels
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/sfml-populate
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/7b5e0a8b0529ca4e9460d390a713a6f6/sfml-populate.rule
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/116f3233d36876df12d8be0f579f5213/sfml-populate-complete.rule
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/384b82a99c66e1323fedfe74219c8d44/sfml-populate-build.rule
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/384b82a99c66e1323fedfe74219c8d44/sfml-populate-configure.rule
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/384b82a99c66e1323fedfe74219c8d44/sfml-populate-download.rule
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/384b82a99c66e1323fedfe74219c8d44/sfml-populate-install.rule
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/384b82a99c66e1323fedfe74219c8d44/sfml-populate-mkdir.rule
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/384b82a99c66e1323fedfe74219c8d44/sfml-populate-patch.rule
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/384b82a99c66e1323fedfe74219c8d44/sfml-populate-test.rule
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/384b82a99c66e1323fedfe74219c8d44/sfml-populate-update.rule

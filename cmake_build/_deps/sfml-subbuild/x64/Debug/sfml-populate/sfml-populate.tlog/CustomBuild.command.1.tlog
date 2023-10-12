@@ -1,0 +1,150 @@
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\384B82A99C66E1323FEDFE74219C8D44\SFML-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\384B82A99C66E1323FEDFE74219C8D44\SFML-POPULATE-DOWNLOAD.RULE
+setlocal
+cd C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\cmake_build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\384B82A99C66E1323FEDFE74219C8D44\SFML-POPULATE-UPDATE.RULE
+setlocal
+cd C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\cmake_build\_deps\sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\384B82A99C66E1323FEDFE74219C8D44\SFML-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\384B82A99C66E1323FEDFE74219C8D44\SFML-POPULATE-CONFIGURE.RULE
+setlocal
+cd C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\cmake_build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\384B82A99C66E1323FEDFE74219C8D44\SFML-POPULATE-BUILD.RULE
+setlocal
+cd C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\cmake_build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\384B82A99C66E1323FEDFE74219C8D44\SFML-POPULATE-INSTALL.RULE
+setlocal
+cd C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\cmake_build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\384B82A99C66E1323FEDFE74219C8D44\SFML-POPULATE-TEST.RULE
+setlocal
+cd C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\cmake_build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\116F3233D36876DF12D8BE0F579F5213\SFML-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/Debug/sfml-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\7B5E0A8B0529CA4E9460D390A713A6F6\SFML-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ETREH\DOCUMENTS\PROGRAMMING\OTUS\C++_DEVELOPER_2023_06\BASIC\LESSON_10\OTUS_CPP_BASIC_HW4\CMAKE_BUILD\_DEPS\SFML-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild -BC:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild --check-stamp-file C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

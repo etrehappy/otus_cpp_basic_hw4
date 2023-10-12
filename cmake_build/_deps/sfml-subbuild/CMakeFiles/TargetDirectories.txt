@@ -1,0 +1,3 @@
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/sfml-populate.dir
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-subbuild/CMakeFiles/ZERO_CHECK.dir

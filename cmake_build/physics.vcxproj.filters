@@ -37,7 +37,4 @@
       <UniqueIdentifier>{098A896C-C501-3F84-88C9-8AE5AC6CFF4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\source\Ball.hpp" />
-  </ItemGroup>
 </Project>
