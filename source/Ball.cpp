@@ -1,9 +1,8 @@
 #include "Ball.hpp"
 #include <cmath>
 
-Ball::Ball(double& x, double& y, Point& vector, double& red, double& green,
-    double& blue, double& radius) 
-   : m_center(x, y), m_velocity(vector), m_color(red, green, blue), m_radius(radius) 
+Ball::Ball(Point& center, Point& vector, Color& color, double& radius) 
+   : m_center(center), m_velocity(vector), m_color(color), m_radius(radius) 
 {
     m_mass = M_PI * pow(m_radius, 3) * 4. / 3.;
 }

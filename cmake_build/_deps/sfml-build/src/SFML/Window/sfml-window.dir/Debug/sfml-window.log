@@ -1,0 +1,31 @@
+﻿  Building Custom Rule C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/cmake_build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt
+  Clipboard.cpp
+  Context.cpp
+  Cursor.cpp
+  GlContext.cpp
+  GlResource.cpp
+  Joystick.cpp
+  JoystickManager.cpp
+  Keyboard.cpp
+  Mouse.cpp
+  Touch.cpp
+  Sensor.cpp
+  SensorManager.cpp
+  VideoMode.cpp
+  Vulkan.cpp
+  Window.cpp
+  WindowBase.cpp
+  WindowImpl.cpp
+  CursorImpl.cpp
+  ClipboardImpl.cpp
+  InputImpl.cpp
+  Generating Code...
+  Compiling...
+  JoystickImpl.cpp
+  SensorImpl.cpp
+  VideoModeImpl.cpp
+  VulkanImplWin32.cpp
+  WindowImplWin32.cpp
+  WglContext.cpp
+  Generating Code...
+  sfml-window.vcxproj -> C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\cmake_build\_deps\sfml-build\lib\Debug\sfml-window-s-d.lib

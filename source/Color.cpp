@@ -16,3 +16,4 @@ double Color::green() const {
 double Color::blue() const {
     return b;
 }
+

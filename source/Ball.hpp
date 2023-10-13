@@ -5,8 +5,7 @@
 
 class Ball {
 public:
-    Ball(double& x, double& y, Point& vector, double& red, double& green,
-         double& blue, double& radius);
+    Ball(Point& center, Point& vector, Color& color, double& radius);
 
     void setVelocity(const Velocity& velocity);
     Velocity getVelocity() const;
