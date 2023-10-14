@@ -1,14 +1,6 @@
-﻿  Ball.cpp
-  Physics.cpp
+﻿  Physics.cpp
 C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(9,40): warning C4458: declaration of 'topLeft' hides class member
 C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.h(19,11): message : see declaration of 'Physics::topLeft'
 C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(9,62): warning C4458: declaration of 'bottomRight' hides class member
 C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.h(20,11): message : see declaration of 'Physics::bottomRight'
-  World.cpp
-C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\World.cpp(41,12): warning C4101: 'red': unreferenced local variable
-C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\World.cpp(43,12): warning C4101: 'blue': unreferenced local variable
-C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\World.cpp(42,12): warning C4101: 'green': unreferenced local variable
-  Application.cpp
-  main.cpp
-  Generating Code...
   physics.vcxproj -> C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\cmake_build\Debug\physics.exe

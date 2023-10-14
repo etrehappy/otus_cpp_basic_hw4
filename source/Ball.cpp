@@ -1,8 +1,8 @@
 #include "Ball.hpp"
 #include <cmath>
 
-Ball::Ball(Point& center, Point& vector, Color& color, double& radius) 
-   : m_center(center), m_velocity(vector), m_color(color), m_radius(radius) 
+Ball::Ball(Point& center, Point& vector, Color& color, double& radius, bool& isCollidable) 
+   : m_center(center), m_velocity(vector), m_color(color), m_radius(radius), m_isCollidable(isCollidable)
 {
     m_mass = M_PI * pow(m_radius, 3) * 4. / 3.;
 }
@@ -74,4 +74,8 @@ double Ball::getRadius() const {
 double Ball::getMass() const {
     // TODO: место для доработки
     return m_mass;
+}
+
+bool Ball::isCollidable() {
+    return m_isCollidable;
 }

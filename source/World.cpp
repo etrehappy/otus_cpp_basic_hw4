@@ -36,11 +36,7 @@ World::World(const std::string& worldFilePath) {
     Point center;
     Point vector;    
     Color color;
-    double radius;
-
-    double red;
-    double green;
-    double blue;
+    double radius;  
 
     bool isCollidable;
 
@@ -63,11 +59,8 @@ World::World(const std::string& worldFilePath) {
         // TODO: место для доработки.
         // Здесь не хватает самого главного - создания
         // объекта класса Ball со свойствами, прочитанными
-        // выше, и его помещения в контейнер balls
-        //Point vector;
-        //vector.x = vx;
-        //vector.y = vy;
-        Ball ball(center, vector, color, radius);
+        // выше, и его помещения в контейнер balls        
+        Ball ball(center, vector, color, radius, isCollidable);
 
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;
