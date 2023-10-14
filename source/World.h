@@ -1,6 +1,7 @@
 #pragma once
 #include "Ball.hpp"
 #include "Physics.h"
+#include "Dust.h"
 #include <vector>
 #include <iostream>
 
@@ -10,7 +11,7 @@ class World {
   public:
     World(const std::string& worldFilePath);
     void show(Painter& painter) const;
-    void update(double time);
+    void update(double time, double totalTime);
 
   private:
     // Границы мира заданы углами прямоугольника
@@ -20,6 +21,7 @@ class World {
     Physics physics;
     // Контейнер с шарами
     std::vector<Ball> balls;
+    std::vector<Dust> dusts;
     // Длина отрезка времени, который не был
     // учтен при прошлой симуляции. См. реализацию update
     double restTime = 0.;

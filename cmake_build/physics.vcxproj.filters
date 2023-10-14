@@ -28,6 +28,9 @@
     <ClCompile Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\black_box\PainterImpl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\source\Dust.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\CMakeLists.txt" />

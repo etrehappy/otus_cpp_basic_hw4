@@ -11,16 +11,19 @@ void Physics::setWorldBox(const Point& topLeft, const Point& bottomRight) {
     this->bottomRight = bottomRight;
 }
 
-void Physics::update(std::vector<Ball>& balls, const size_t ticks) const {
+void Physics::update(std::vector<Ball>& balls, std::vector<Dust>& dusts,
+                     const size_t ticks, double totalTime) const {
 
     for (size_t i = 0; i < ticks; ++i) {
         move(balls);
-        collideWithBox(balls);
-        collideBalls(balls);
+        collideWithBox(balls, dusts);
+        collideBalls(balls, dusts);
+        move(dusts);
+        cleanDusts(dusts, totalTime);
     }
 }
 
-void Physics::collideBalls(std::vector<Ball>& balls) const {
+void Physics::collideBalls(std::vector<Ball>& balls, std::vector<Dust>& dusts) const {
    
         for (auto a = balls.begin(); a != balls.end(); ++a) {
             for (auto b = std::next(a); b != balls.end(); ++b) {
@@ -36,7 +39,7 @@ void Physics::collideBalls(std::vector<Ball>& balls) const {
                     collisionDistance * collisionDistance;
 
                 if (distanceBetweenCenters2 < collisionDistance2) {
-                    processCollision(*a, *b, distanceBetweenCenters2);
+                    processCollision(*a, *b, distanceBetweenCenters2, dusts); 
                 }
                 
             }
@@ -44,7 +47,7 @@ void Physics::collideBalls(std::vector<Ball>& balls) const {
    
 }
 
-void Physics::collideWithBox(std::vector<Ball>& balls) const {
+void Physics::collideWithBox(std::vector<Ball>& balls, std::vector<Dust>& dusts) const {
     for (Ball& ball : balls) {
         if (ball.isCollidable() == false )
             continue; 
@@ -56,15 +59,33 @@ void Physics::collideWithBox(std::vector<Ball>& balls) const {
             return v < lo || v > hi;
         };
 
-        if (isOutOfRange(p.x, topLeft.x + r, bottomRight.x - r)) {
+        
+        Point dust_position = p;        
+
+        if (isOutOfRange(p.x, topLeft.x + r, bottomRight.x - r)) 
+        {
             Point vector = ball.getVelocity().vector();
-            vector.x = -vector.x;
-            ball.setVelocity(vector);
-        } else if (isOutOfRange(p.y, topLeft.y + r, bottomRight.y - r)) {
+            vector.x = -vector.x;            
+           
+            dust_position.y -= r;
+            Dust dust(dust_position, ball.getVelocity(), r * 0.3);
+            dusts.push_back(dust);
+
+            ball.setVelocity(vector); 
+
+        } 
+        else if (isOutOfRange(p.y, topLeft.y + r, bottomRight.y - r)) 
+        {
             Point vector = ball.getVelocity().vector();
             vector.y = -vector.y;
+            
+            dust_position.y -= r;
+            Dust dust(dust_position, ball.getVelocity(), r * 0.3);
+            dusts.push_back(dust);
+
             ball.setVelocity(vector);
-        }
+        }      
+            
     }
 }
 
@@ -76,8 +97,8 @@ void Physics::move(std::vector<Ball>& balls) const {
     }
 }
 
-void Physics::processCollision(Ball& a, Ball& b,
-                               double distanceBetweenCenters2) const {
+void Physics::processCollision(Ball& a, Ball& b, 
+                                double distanceBetweenCenters2, std::vector<Dust>& dusts) const {
     // нормированный вектор столкновения
     const Point normal =
         (b.getCenter() - a.getCenter()) / std::sqrt(distanceBetweenCenters2);
@@ -93,4 +114,52 @@ void Physics::processCollision(Ball& a, Ball& b,
     // задаем новые скорости мячей после столкновения
     a.setVelocity(Velocity(aV - normal * p * a.getMass()));
     b.setVelocity(Velocity(bV + normal * p * b.getMass()));
+
+    
+    //ищем точку столкновения между шарами
+    double radius_a = a.getRadius();
+    double radius_b = b.getRadius();    
+    double segment_b = (radius_b * radius_b - radius_a * radius_a + distanceBetweenCenters2 * distanceBetweenCenters2) / (2 * distanceBetweenCenters2);
+    double segment_a = distanceBetweenCenters2 - segment_b;
+    Point dust_position = ((b.getCenter() - a.getCenter()) * segment_a / distanceBetweenCenters2) + a.getCenter();
+
+    //добавляем частицы
+    Dust dust(dust_position, a.getVelocity(), a.getRadius()*0.3 );
+    dusts.push_back(dust);
 }
+
+void Physics::move(std::vector<Dust>& dusts) const {
+    for (Dust& dust : dusts) {
+        Point newPos = dust.getCenter() - dust.getVelocity().vector() * timePerTick;
+        dust.setCenter(newPos);
+    }
+}
+
+void Physics::cleanDusts(std::vector<Dust>& dusts, double totalTime) const {
+    double amount_time = 0.0005;
+    
+    int i = 0;
+    
+
+    for (auto d = dusts.begin(); d != dusts.end(); ++d) {
+
+        if (d->getDurationDisplay() <= 0.) {
+            dusts[i].~Dust();
+            dusts.erase(d);
+
+            if (dusts.empty() )
+                    return;
+
+            d = dusts.begin();
+            continue;
+        }
+
+        d->setDurationDisplay(amount_time);
+        ++i;        
+    }
+
+    if (totalTime > 9.99)
+        dusts.clear();
+}
+
+
