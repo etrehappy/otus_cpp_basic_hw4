@@ -28,6 +28,7 @@ void Physics::collideBalls(std::vector<Ball>& balls, std::vector<Dust>& dusts) c
         for (auto a = balls.begin(); a != balls.end(); ++a) {
             for (auto b = std::next(a); b != balls.end(); ++b) {
                 
+                // Доп.задание 2, обработка столкновений
                 if (a->isCollidable() == false || b->isCollidable() == false)
                     continue;                
 
@@ -49,6 +50,8 @@ void Physics::collideBalls(std::vector<Ball>& balls, std::vector<Dust>& dusts) c
 
 void Physics::collideWithBox(std::vector<Ball>& balls, std::vector<Dust>& dusts) const {
     for (Ball& ball : balls) {
+        
+        //Доп.задание 2, обработка столкновений
         if (ball.isCollidable() == false )
             continue; 
 
@@ -67,9 +70,10 @@ void Physics::collideWithBox(std::vector<Ball>& balls, std::vector<Dust>& dusts)
             Point vector = ball.getVelocity().vector();
             vector.x = -vector.x;            
            
-            dust_position.y -= r;
-            Dust dust(dust_position, ball.getVelocity(), r * 0.3);
-            dusts.push_back(dust);
+                // Доп. задание 3, отражение от стен (простая логика без доп. расчётов)
+                dust_position.y -= r;
+                Dust dust(dust_position, ball.getVelocity(), r * 0.3);
+                dusts.push_back(dust);
 
             ball.setVelocity(vector); 
 
@@ -79,9 +83,10 @@ void Physics::collideWithBox(std::vector<Ball>& balls, std::vector<Dust>& dusts)
             Point vector = ball.getVelocity().vector();
             vector.y = -vector.y;
             
-            dust_position.y -= r;
-            Dust dust(dust_position, ball.getVelocity(), r * 0.3);
-            dusts.push_back(dust);
+                // Доп. задание 3, отражение от стен (простая логика без доп. расчётов)
+                dust_position.y -= r;
+                Dust dust(dust_position, ball.getVelocity(), r * 0.3);
+                dusts.push_back(dust);
 
             ball.setVelocity(vector);
         }      
@@ -115,8 +120,13 @@ void Physics::processCollision(Ball& a, Ball& b,
     a.setVelocity(Velocity(aV - normal * p * a.getMass()));
     b.setVelocity(Velocity(bV + normal * p * b.getMass()));
 
+
+
+
+
     
-    //ищем точку столкновения между шарами
+    //Доп. задание 3
+    //ищем точку столкновения между шарами по векторно-параметрическому уравнению прямой
     double radius_a = a.getRadius();
     double radius_b = b.getRadius();    
     double segment_b = (radius_b * radius_b - radius_a * radius_a + distanceBetweenCenters2 * distanceBetweenCenters2) / (2 * distanceBetweenCenters2);
@@ -128,6 +138,10 @@ void Physics::processCollision(Ball& a, Ball& b,
     dusts.push_back(dust);
 }
 
+
+
+
+// Доп. задание 3
 void Physics::move(std::vector<Dust>& dusts) const {
     for (Dust& dust : dusts) {
         Point newPos = dust.getCenter() - dust.getVelocity().vector() * timePerTick;
@@ -138,9 +152,10 @@ void Physics::move(std::vector<Dust>& dusts) const {
 void Physics::cleanDusts(std::vector<Dust>& dusts, double totalTime) const {
     double amount_time = 0.0005;
     
+    /*Когда вызывается cleanDusts, то вызывается и setDurationDisplay(),
+        чтобы уменьшить время отображения частицы.Если время закончилось,
+        удалется экзмепляр класса Balls, а потом и элемент вектора dusts*/    
     int i = 0;
-    
-
     for (auto d = dusts.begin(); d != dusts.end(); ++d) {
 
         if (d->getDurationDisplay() <= 0.) {
@@ -150,7 +165,10 @@ void Physics::cleanDusts(std::vector<Dust>& dusts, double totalTime) const {
             if (dusts.empty() )
                     return;
 
-            d = dusts.begin();
+
+            // После удаления  первого элемента нужно уменьшить время у других частицы,
+            // задаем d для корректной работы цикла
+            d = dusts.begin(); 
             continue;
         }
 
@@ -158,6 +176,7 @@ void Physics::cleanDusts(std::vector<Dust>& dusts, double totalTime) const {
         ++i;        
     }
 
+    //Удаляем все частицы с экрана, когда картинка собрана на 10ой секунде
     if (totalTime > 9.99)
         dusts.clear();
 }

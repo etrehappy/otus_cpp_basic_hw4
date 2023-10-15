@@ -2,28 +2,23 @@
 #include <random>
 #include <chrono>
 
-Dust::Dust() {}
-
-Dust::~Dust() {}
-
 Dust::Dust(const Point& vector, Velocity& ball_velocity, double radius) 
     : m_center(vector), m_velocity(ball_velocity),
       m_color(random_color(), random_color(), random_color()),
       m_durationDisplay(1.), m_radius(radius) {}
 
-Velocity Dust::getVelocity() const {
-    // TODO: место для доработки
+Dust::~Dust() {}
+
+Velocity Dust::getVelocity() const {    
     return m_velocity;
 }
 
 
 Point Dust::getCenter() const {
-    // TODO: место для доработки
     return m_center;
 }
 
 void Dust::setCenter(const Point& center) {
-    // TODO: место для доработки
     m_center = center;
 }
 

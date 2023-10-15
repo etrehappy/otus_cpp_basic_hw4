@@ -21,6 +21,7 @@ class World {
     Physics physics;
     // Контейнер с шарами
     std::vector<Ball> balls;
+
     std::vector<Dust> dusts;
     // Длина отрезка времени, который не был
     // учтен при прошлой симуляции. См. реализацию update

@@ -31,6 +31,11 @@ inline double distance2(const Point& lhs, const Point& rhs) {
     return delta.x * delta.x + delta.y * delta.y;
 }
 
+
+
+
+//Доп. задание 2
+
 inline std::istream& operator>>(std::istream& stream, Point& variable) {
     stream >> variable.x >> variable.y;
     return stream;

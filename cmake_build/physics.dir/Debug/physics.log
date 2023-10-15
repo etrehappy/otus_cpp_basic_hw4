@@ -1,12 +1,23 @@
-﻿  Physics.cpp
+﻿  Building Custom Rule C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_10/otus_cpp_basic_hw4/source/CMakeLists.txt
+  main.cpp
+  World.cpp
+  Ball.cpp
+  Physics.cpp
 C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(9,40): warning C4458: declaration of 'topLeft' hides class member
 C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.h(23,11): message : see declaration of 'Physics::topLeft'
 C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(9,62): warning C4458: declaration of 'bottomRight' hides class member
 C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.h(24,11): message : see declaration of 'Physics::bottomRight'
-C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(73,54): warning C4239: nonstandard extension used: 'argument': conversion from 'Velocity' to 'Velocity &'
-C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(73,54): message : A non-const reference may only be bound to an lvalue
-C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(85,54): warning C4239: nonstandard extension used: 'argument': conversion from 'Velocity' to 'Velocity &'
-C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(85,54): message : A non-const reference may only be bound to an lvalue
-C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(129,43): warning C4239: nonstandard extension used: 'argument': conversion from 'Velocity' to 'Velocity &'
-C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(129,43): message : A non-const reference may only be bound to an lvalue
+C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(75,58): warning C4239: nonstandard extension used: 'argument': conversion from 'Velocity' to 'Velocity &'
+C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(75,58): message : A non-const reference may only be bound to an lvalue
+C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(88,58): warning C4239: nonstandard extension used: 'argument': conversion from 'Velocity' to 'Velocity &'
+C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(88,58): message : A non-const reference may only be bound to an lvalue
+C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(137,43): warning C4239: nonstandard extension used: 'argument': conversion from 'Velocity' to 'Velocity &'
+C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\source\Physics.cpp(137,43): message : A non-const reference may only be bound to an lvalue
+  Color.cpp
+  Painter.cpp
+  Dust.cpp
+  Application.cpp
+  View.cpp
+  PainterImpl.cpp
+  Generating Code...
   physics.vcxproj -> C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_10\otus_cpp_basic_hw4\cmake_build\Debug\physics.exe

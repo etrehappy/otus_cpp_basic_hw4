@@ -24,7 +24,7 @@ World::World(const std::string& worldFilePath) {
      * многократно - хорошо бы вынести это в функцию
      * и не дублировать код...
      */
-    stream >> topLeft.x >> topLeft.y >> bottomRight.x >> bottomRight.y;
+    stream >> topLeft >> bottomRight;
     physics.setWorldBox(topLeft, bottomRight);
 
     /**
@@ -80,7 +80,7 @@ void World::show(Painter& painter) const {
         ball.draw(painter);
     }
 
-    // Вызываем отрисовку каждой частицы
+    // Доп. задание 3. Вызываем отрисовку каждой частицы
     for (const Dust& dust : dusts) {
         dust.draw(painter);
     }
@@ -108,5 +108,6 @@ void World::update(double time, double totalTime) {
     const auto ticks = static_cast<size_t>(std::floor(time / timePerTick));
     restTime = time - double(ticks) * timePerTick;
 
+    //Доп. задание 3, добавлены dusts и TotalTime
     physics.update(balls, dusts, ticks, totalTime);
 }

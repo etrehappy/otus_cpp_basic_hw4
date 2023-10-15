@@ -5,7 +5,6 @@
 
 class Dust {
   public:
-    Dust();
     Dust(const Point& vector, Velocity& ball_velocity, double radius);
     ~Dust();
     Velocity getVelocity() const;
