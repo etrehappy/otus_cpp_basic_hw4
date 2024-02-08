@@ -1,5 +1,5 @@
-#include "Application.hpp"
-#include "../World.hpp"
+#include "Application.h"
+#include "../World.h"
 #include <SFML/Window/Event.hpp>
 #include <chrono>
 #include <map>
@@ -43,7 +43,7 @@ void Application::updateWorld(World& world) {
     totalTime += delta;
 
     if (totalTime < 10.) {
-        world.update(delta);
+        world.update(delta, totalTime);
     }
 }
 

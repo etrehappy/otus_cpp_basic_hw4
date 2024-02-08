@@ -1,6 +1,6 @@
 #pragma once
-#include "Color.hpp"
-#include "Point.hpp"
+#include "Color.h"
+#include "Point.h"
 #include <memory>
 
 class View;

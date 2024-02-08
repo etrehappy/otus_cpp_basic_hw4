@@ -1,4 +1,4 @@
-#include "PainterImpl.hpp"
+#include "PainterImpl.h"
 #include <SFML/Graphics/CircleShape.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
