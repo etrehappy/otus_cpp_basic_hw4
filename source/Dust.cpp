@@ -31,7 +31,7 @@ void Dust::draw(Painter& painter) const {
 
 
 ///@brief уменьшаем время отображения
-void Dust::setDurationDisplay(double step) {
+void Dust::reduceDurationDisplay(double step) {
     m_durationDisplay -= step;
 }
 

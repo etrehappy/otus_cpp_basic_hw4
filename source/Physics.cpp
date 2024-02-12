@@ -19,8 +19,13 @@ void Physics::update(std::vector<Ball>& balls, std::vector<Dust>& dusts,
         collideWithBox(balls, dusts);
         collideBalls(balls, dusts);
         move(dusts);
-        cleanDusts(dusts, totalTime);
+
+        if (!dusts.empty())
+            reduceDustsDuration(dusts);
     }
+
+    if (!dusts.empty())
+        cleanDusts(dusts, totalTime);
 }
 
 void Physics::collideBalls(std::vector<Ball>& balls, std::vector<Dust>& dusts) const {
@@ -29,7 +34,7 @@ void Physics::collideBalls(std::vector<Ball>& balls, std::vector<Dust>& dusts) c
             for (auto b = std::next(a); b != balls.end(); ++b) {
                 
                 // Доп.задание 2, обработка столкновений
-                if (a->isCollidable() == false || b->isCollidable() == false)
+                if (!a->isCollidable() || !b->isCollidable() )
                     continue;                
 
                 const double distanceBetweenCenters2 =
@@ -52,7 +57,7 @@ void Physics::collideWithBox(std::vector<Ball>& balls, std::vector<Dust>& dusts)
     for (Ball& ball : balls) {
         
         //Доп.задание 2, обработка столкновений
-        if (ball.isCollidable() == false )
+        if (!ball.isCollidable() )
             continue; 
 
         const Point p = ball.getCenter();
@@ -144,34 +149,29 @@ void Physics::move(std::vector<Dust>& dusts) const {
     }
 }
 
-void Physics::cleanDusts(std::vector<Dust>& dusts, double totalTime) const {
-    double amount_time = 0.0005;
-    
-    /*Когда вызывается cleanDusts, то вызывается и setDurationDisplay(),
-        чтобы уменьшить время отображения частицы.Если время закончилось,
-        удаляется экзмепляр класса Balls, а потом и элемент вектора dusts*/    
-    int i = 0;
-    for (auto it = dusts.begin(); it != dusts.end(); ++it) {
+void Physics::reduceDustsDuration(std::vector<Dust>& dusts) const 
+{
+     double time_step = 0.0007;
 
-        if (it->getDurationDisplay() <= 0.) {
-            dusts[i].~Dust();
-            dusts.erase(it);
+     for (auto it = dusts.begin(); it != dusts.end(); ++it) 
+     {
+        // Уменьшаем время отображения частицы.
+        it->reduceDurationDisplay(time_step);
+     }     
+}
 
-            if (dusts.empty() )
-                    return;
+void Physics::cleanDusts(std::vector<Dust>& dusts, double totalTime) const {    
 
-            // После удаления  первого элемента нужно уменьшить время у других частицы,
-            // задаем it для корректной работы цикла
-            it = dusts.begin(); 
-            continue;
-        }
+     // Если время закончилось, удаляется элемент вектора dusts
+     auto it = dusts.begin();
+     if (it->getDurationDisplay() <= 0.) {
 
-        it->setDurationDisplay(amount_time);
-        ++i;        
-    }
+        dusts.erase(it);
+        return;
+     }
 
-    //Удаляем все частицы с экрана, когда картинка собрана на 10ой секунде
-    if (totalTime > 9.99)
+     // Удаление всех частиц в конце
+     if (totalTime > 9.99)
         dusts.clear();
 }
 

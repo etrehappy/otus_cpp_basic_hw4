@@ -11,7 +11,7 @@ class Dust {
     Point getCenter() const;
     void setCenter(const Point& center);
     void draw(Painter& painter) const;
-    void setDurationDisplay(double step);
+    void reduceDurationDisplay(double step);
     double getDurationDisplay() const;
 
   private:

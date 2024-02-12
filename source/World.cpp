@@ -24,12 +24,12 @@ World::World(const std::string& worldFilePath) {
     /**
      * Доп. задание 1
      */
-    Point center;
-    Point vector;    
-    Color color;
-    double radius;  
+    Point center{};
+    Point vector{};    
+    Color color{};
+    double radius = 0.0;  
 
-    bool isCollidable;
+    bool isCollidable = false;
 
     // Здесь не хватает обработки ошибок, но на текущем
     // уровне прохождения курса нас это устраивает

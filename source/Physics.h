@@ -17,7 +17,8 @@ class Physics {
     void processCollision(Ball& a, Ball& b, 
                             double distanceBetweenCenters2, std::vector<Dust>& dusts) const;
     // Доп. задание 3
-    void move(std::vector<Dust>& dusts) const;
+    void move(std::vector<Dust>& dusts) const;    
+    void reduceDustsDuration(std::vector<Dust>& dusts) const;
     void cleanDusts(std::vector<Dust>& dusts, double totalTime) const;
 
   private:
