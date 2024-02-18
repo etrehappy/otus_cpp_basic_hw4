@@ -1,4 +1,4 @@
-#include "Color.hpp"
+#include "Color.h"
 
 Color::Color() = default;
 
@@ -16,3 +16,4 @@ double Color::green() const {
 double Color::blue() const {
     return b;
 }
+

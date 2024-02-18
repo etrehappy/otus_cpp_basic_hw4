@@ -1,6 +1,6 @@
 #pragma once
-#include "../Color.hpp"
-#include "View.hpp"
+#include "../Color.h"
+#include "View.h"
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/System/Vector2.hpp>
 

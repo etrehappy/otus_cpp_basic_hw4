@@ -24,15 +24,8 @@ else ()
     FetchContent_MakeAvailable(SFML)
 endif ()
 
-# К сожалению, вплоть до C++20 https://en.cppreference.com/w/cpp/numeric/constants
-# нет удобного кроссплатформенного способа получить число pi.
-# define ниже нужен для включения M_PI
-if (MSVC)
-    add_definitions(-D_USE_MATH_DEFINES)
-endif ()
-
 add_executable(physics
-        main.cpp World.cpp Ball.cpp Physics.cpp Color.cpp Painter.cpp
+        main.cpp World.cpp Ball.cpp Physics.cpp Color.cpp Painter.cpp Dust.cpp
         black_box/Application.cpp black_box/View.cpp black_box/PainterImpl.cpp)
 target_link_libraries(physics PRIVATE sfml-graphics)
 
@@ -40,3 +33,11 @@ target_compile_options(physics PRIVATE
         $<$<CXX_COMPILER_ID:MSVC>:/W4>
         $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -Wpedantic>
         )
+
+# К сожалению, вплоть до C++20 https://en.cppreference.com/w/cpp/numeric/constants
+# нет удобного кроссплатформенного способа получить число pi.
+# define ниже нужен для включения M_PI
+if (MSVC)
+    add_definitions(-D_USE_MATH_DEFINES)
+	set_property(DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT physics)
+endif ()

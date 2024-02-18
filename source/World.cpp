@@ -1,6 +1,7 @@
-#include "World.hpp"
-#include "Painter.hpp"
+#include "World.h"
+#include "Painter.h"
 #include <fstream>
+#include "Color.h"
 
 // Длительность одного тика симуляции.
 // Подробнее см. update()
@@ -15,43 +16,29 @@ World::World(const std::string& worldFilePath) {
 
     std::ifstream stream(worldFilePath);
     /**
-     * TODO: хорошее место для улучшения.
-     * Чтение границ мира из модели
-     * Обратите внимание, что здесь и далее мы многократно
-     * читаем в объект типа Point, последовательно
-     * заполняя координаты x и у. Если что-то делаем
-     * многократно - хорошо бы вынести это в функцию
-     * и не дублировать код...
+     * Доп. задание 1
      */
-    stream >> topLeft.x >> topLeft.y >> bottomRight.x >> bottomRight.y;
+    stream >> topLeft >> bottomRight;
     physics.setWorldBox(topLeft, bottomRight);
 
     /**
-     * TODO: хорошее место для улучшения.
-     * (x, y) и (vx, vy) - составные части объекта, также
-     * как и (red, green, blue). Опять же, можно упростить
-     * этот код, научившись читать сразу Point, Color...
+     * Доп. задание 1
      */
-    double x;
-    double y;
-    double vx;
-    double vy;
-    double radius;
+    Point center{};
+    Point vector{};    
+    Color color{};
+    double radius = 0.0;  
 
-    double red;
-    double green;
-    double blue;
-
-    bool isCollidable;
+    bool isCollidable = false;
 
     // Здесь не хватает обработки ошибок, но на текущем
     // уровне прохождения курса нас это устраивает
     while (stream.peek(), stream.good()) {
         // Читаем координаты центра шара (x, y) и вектор
         // его скорости (vx, vy)
-        stream >> x >> y >> vx >> vy;
+        stream >> center >> vector;
         // Читаем три составляющие цвета шара
-        stream >> red >> green >> blue;
+        stream >> color;
         // Читаем радиус шара
         stream >> radius;
         // Читаем свойство шара isCollidable, которое
@@ -59,16 +46,13 @@ World::World(const std::string& worldFilePath) {
         // шаров как столкновение. Если true - требуется.
         // В базовой части задания этот параметр
         stream >> std::boolalpha >> isCollidable;
-
-        // TODO: место для доработки.
-        // Здесь не хватает самого главного - создания
-        // объекта класса Ball со свойствами, прочитанными
-        // выше, и его помещения в контейнер balls
+                        
+        Ball ball(center, vector, color, radius, isCollidable);
 
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;
         // добавьте его в конец контейнера вызовом
-        // balls.push_back(ball);
+         balls.push_back(ball);
     }
 }
 
@@ -82,10 +66,15 @@ void World::show(Painter& painter) const {
     for (const Ball& ball : balls) {
         ball.draw(painter);
     }
+
+    // Доп. задание 3. Вызываем отрисовку каждой частицы
+    for (const Dust& dust : dusts) {
+        dust.draw(painter);
+    }
 }
 
 /// @brief Обновляет состояние мира
-void World::update(double time) {
+void World::update(double time, double totalTime) {
     /**
      * В реальном мире время течет непрерывно. Однако
      * компьютеры дискретны по своей природе. Поэтому
@@ -106,5 +95,6 @@ void World::update(double time) {
     const auto ticks = static_cast<size_t>(std::floor(time / timePerTick));
     restTime = time - double(ticks) * timePerTick;
 
-    physics.update(balls, ticks);
+    //Доп. задание 3, добавлены dusts и TotalTime
+    physics.update(balls, dusts, ticks, totalTime);
 }
